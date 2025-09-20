@@ -9,6 +9,8 @@ async function start() {
     await db.sequelize.authenticate();
     await db.sequelize.sync({ alter: true });
     console.log('Database connected & models synced');
+    
+    // This line will now work correctly
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
